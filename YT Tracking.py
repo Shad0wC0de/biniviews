@@ -12,6 +12,7 @@ ydl_opts = {
     'force_generic_extractor': False,
     'skip_download': True,
     'no_warnings': True,   # 👈 ADD THIS
+    'cookiesfrombrowswer': ('safari')
 }
 
 video_urls = []
@@ -37,6 +38,7 @@ ydl_opts_meta = {
     'quiet': True,
     'skip_download': True,
     'no_warnings': True,   # 👈 ADD THIS
+    'cookiesfrombrowswer': ('safari')
 }
 
 for i, chunk in enumerate(chunks):
