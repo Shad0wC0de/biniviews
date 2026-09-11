@@ -4,6 +4,8 @@ import math
 import time
 
 channel_url = "https://www.youtube.com/playlist?list=UUtOcDBKgyr-f50SgbMErFkQ"
+#channel_url = "https://www.youtube.com/channel/UCtOcDBKgyr-f50SgbMErFkQ/videos"
+
 chunk_size = 100  # Max rows per file
 
 ydl_opts = {
@@ -12,7 +14,9 @@ ydl_opts = {
     'force_generic_extractor': False,
     'skip_download': True,
     'no_warnings': True,   # 👈 ADD THIS
-    'cookiesfrombrowswer': ('safari')
+    'cookiesfrombrowswer': ('firefox',)
+#    'playlistend': 99999,                # explicit ceiling
+#    'sleep_interval_requests': 10
 }
 
 video_urls = []
@@ -38,7 +42,9 @@ ydl_opts_meta = {
     'quiet': True,
     'skip_download': True,
     'no_warnings': True,   # 👈 ADD THIS
-    'cookiesfrombrowswer': ('safari')
+    'cookiesfrombrowser': ('firefox',)
+#    'playlistend': 99999,                # explicit ceiling
+#    'sleep_interval_requests': 10
 }
 
 for i, chunk in enumerate(chunks):
